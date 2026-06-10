@@ -23,7 +23,7 @@ export function DashboardShell({ children }: { children: ReactNode }) {
               <AppSidebar onNavigate={() => setOpen(false)} />
             </SheetContent>
           </Sheet>
-          <div className="text-sm font-semibold">Workplace AI</div>
+          <div className="text-sm font-semibold">Capaciti</div>
         </header>
         <main className="flex-1 px-4 py-6 sm:px-6 lg:px-10 lg:py-10">{children}</main>
         <footer className="border-t border-border/60 bg-muted/30 px-4 py-3 sm:px-6 lg:px-10">

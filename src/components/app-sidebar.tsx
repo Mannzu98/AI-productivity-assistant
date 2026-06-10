@@ -9,6 +9,7 @@ import {
   Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import capacitiLogo from "@/assets/capaciti-logo.png.asset.json";
 
 type NavItem = {
   to: "/" | "/email" | "/summarizer" | "/planner" | "/research" | "/chat" | "/settings";
@@ -32,13 +33,17 @@ export function AppSidebar({ onNavigate }: { onNavigate?: () => void }) {
 
   return (
     <aside className="flex h-full w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar">
-      <div className="flex items-center gap-2.5 px-5 py-5">
-        <div className="grid h-9 w-9 place-items-center rounded-xl btn-primary-gradient">
-          <Sparkles className="h-5 w-5" />
-        </div>
+      <div className="flex items-center gap-3 px-5 py-5">
+        <img
+          src={capacitiLogo.url}
+          alt="Capaciti logo"
+          width={40}
+          height={40}
+          className="h-10 w-10 rounded-lg object-contain"
+        />
         <div className="min-w-0">
-          <div className="text-sm font-bold leading-tight text-sidebar-foreground">Workplace AI</div>
-          <div className="text-[11px] text-muted-foreground">Productivity Suite</div>
+          <div className="text-sm font-bold leading-tight text-sidebar-foreground">Capaciti</div>
+          <div className="text-[11px] text-sidebar-foreground/70">Productivity Suite</div>
         </div>
       </div>
 
@@ -55,7 +60,7 @@ export function AppSidebar({ onNavigate }: { onNavigate?: () => void }) {
                 "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all",
                 active
                   ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-sm"
-                  : "text-sidebar-foreground/75 hover:bg-sidebar-accent/60 hover:text-sidebar-foreground",
+                  : "text-sidebar-foreground/80 hover:bg-sidebar-accent/60 hover:text-sidebar-foreground",
               )}
             >
               <Icon className="h-4 w-4 shrink-0" />
@@ -65,8 +70,8 @@ export function AppSidebar({ onNavigate }: { onNavigate?: () => void }) {
         })}
       </nav>
 
-      <div className="m-3 rounded-xl border border-sidebar-border bg-card p-3 text-xs text-muted-foreground">
-        <div className="font-semibold text-foreground">Powered by Lovable AI</div>
+      <div className="m-3 rounded-xl border border-sidebar-border bg-sidebar-accent/40 p-3 text-xs text-sidebar-foreground/70">
+        <div className="font-semibold text-sidebar-foreground">Powered by Lovable AI</div>
         <p className="mt-1 leading-relaxed">Smart workflows, drafts, and summaries — all in one place.</p>
       </div>
     </aside>
