@@ -10,7 +10,14 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const items = [
+type NavItem = {
+  to: "/" | "/email" | "/summarizer" | "/planner" | "/research" | "/chat" | "/settings";
+  label: string;
+  icon: typeof LayoutDashboard;
+  exact?: boolean;
+};
+
+const items: NavItem[] = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/email", label: "Email Generator", icon: Mail },
   { to: "/summarizer", label: "Notes Summarizer", icon: FileText },
@@ -18,7 +25,7 @@ const items = [
   { to: "/research", label: "Research Assistant", icon: Sparkles },
   { to: "/chat", label: "Chatbot", icon: MessageSquare },
   { to: "/settings", label: "Settings", icon: Settings },
-] as const;
+];
 
 export function AppSidebar({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
