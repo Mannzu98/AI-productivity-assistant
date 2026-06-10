@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Info } from "lucide-react";
 import { AppSidebar } from "./app-sidebar";
 
 export function DashboardShell({ children }: { children: ReactNode }) {
