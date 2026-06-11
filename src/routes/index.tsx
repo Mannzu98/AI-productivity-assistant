@@ -61,7 +61,7 @@ function DashboardHome() {
           AI Workplace Productivity Assistant
         </div>
         <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-          Welcome to your <span className="gradient-text">Workplace AI</span>
+          Welcome to <span className="gradient-text">AI Assistance</span>
         </h1>
         <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
           Automate the busywork. Draft emails, summarize meetings, plan your week, run quick
