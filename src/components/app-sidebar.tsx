@@ -9,7 +9,7 @@ import {
   Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import capacitiLogo from "@/assets/capaciti-logo.png.asset.json";
+import aiTechLogo from "@/assets/ai-tech-logo.png";
 
 type NavItem = {
   to: "/" | "/email" | "/summarizer" | "/planner" | "/research" | "/chat" | "/settings";
@@ -35,14 +35,14 @@ export function AppSidebar({ onNavigate }: { onNavigate?: () => void }) {
     <aside className="flex h-full w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar">
       <div className="flex items-center gap-3 px-5 py-5">
         <img
-          src={capacitiLogo.url}
-          alt="Capaciti logo"
+          src={aiTechLogo}
+          alt="AI Tech logo"
           width={40}
           height={40}
           className="h-10 w-10 rounded-lg object-contain"
         />
         <div className="min-w-0">
-          <div className="text-sm font-bold leading-tight text-sidebar-foreground">Capaciti</div>
+          <div className="text-sm font-bold leading-tight text-sidebar-foreground">AI Tech</div>
           <div className="text-[11px] text-sidebar-foreground/70">Productivity Suite</div>
         </div>
       </div>
